@@ -1,11 +1,9 @@
 package breakout
 
-type virtualGamepadButton int
+type virtualKeyboardKey int
 
 const (
-	virtualGamepadButtonLeft virtualGamepadButton = iota
-	virtualGamepadButtonRight
-	virtualGamepadButtonDown
-	virtualGamepadButtonButtonA
-	virtualGamepadButtonButtonB
+	virtualKeyboardKeyLeft virtualKeyboardKey = iota
+	virtualKeyboardKeyRight
+	virtualKeyboardKeyAciton
 )
