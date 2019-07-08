@@ -6,18 +6,18 @@ import (
 )
 
 func (i *Input) Update() {
-	if !i.gamepadConfig.IsInitialized() {
+	if !i.keyboardConfig.IsInitialized() {
 		return
 	}
 
-	if i.virtualGamepadButtonStates == nil {
-		i.virtualGamepadButtonStates = map[virtualGamepadButton]int{}
+	if i.virtualKeyboardKeyStates == nil {
+		i.virtualKeyboardKeyStates = map[virtualKeyboardKey]int{}
 	}
-	for _, b := range virtualGamepadButtons {
-		if !i.gamepadConfig.IsButtonPressed(b) {
-			i.virtualGamepadButtonStates[b] = 0
+	for _, b := range virtualKeyboardKey {
+		if !i.keyboardConfig.IsKeyPressed(b) {
+			i.virtualKeyboardKeyStates[b] = 0
 			continue
 		}
-		i.virtualGamepadButtonStates[b]++
+		i.virtualKeyboardKeyStates[b]++
 	}
 }
