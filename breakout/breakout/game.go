@@ -10,8 +10,8 @@ const (
 )
 
 type Game struct {
-	sceneManager *SceneManager
-	input        Input
+	screenManager *ScreenManager
+	input Input
 }
 
 func (g *Game) Update(r *ebiten.Image) error {
